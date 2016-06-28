@@ -1,4 +1,5 @@
-// Tahir ÖZDEMİR 152120141047
+// Tahir Ã–zdemir
+//Mart 2016
 #include <iostream>
 #include <time.h>
 #define MAX 20
@@ -96,7 +97,7 @@ void arama(int a[], int esayisi) {
 	}
 		
 	else {
-		//İkili (Binary) Arama
+		//Ãkili (Binary) Arama
 		int basla = 0, bit = esayisi-1, k, ksayisi = 1;
 		while (basla <= bit) {
 			k = (basla + bit) / 2;
@@ -113,7 +114,7 @@ void arama(int a[], int esayisi) {
 			}
 			ksayisi++;
 		}
-		//Interpolation (ara değer atamalı)
+		//Interpolation (ara deÃ°er atamalÃ½)
 		int orta, interk = 0;
 		basla = 0;
 		bit = esayisi - 1;
@@ -153,7 +154,7 @@ void dizi(int a[], int esayisi) {
 int kabarcik(int a[], int esayisi, int *kksp){
 	int gecici, ydsayisi=0;
 	int kks = *kksp;
-	//kabarcık sıralama -elemanları ikililer olarak kontrol ediyor-
+	//kabarcÃ½k sÃ½ralama -elemanlarÃ½ ikililer olarak kontrol ediyor-
 	for (int i = 1; i < esayisi; i++) {
 		for (int j = 0; j < esayisi - 1; j++) {
 			if (a[j] > a[j + 1]) {
@@ -173,7 +174,7 @@ int kabarcik(int a[], int esayisi, int *kksp){
 int insertion(int a[], int esayisi, int *iksp){
 	int  ydsayisi = 0;
 	int iks = *iksp;
-	//insertion (eklemeli) -büyük olan değerleri ileriye kaydırıyor-
+	//insertion (eklemeli) -bÃ¼yÃ¼k olan deÃ°erleri ileriye kaydÃ½rÃ½yor-
 	for (int k = 1; k < esayisi; k++) {
 		int z = k;
 		int temp = a[k];
@@ -190,7 +191,7 @@ int insertion(int a[], int esayisi, int *iksp){
 }
 
 int selection(int a[], int esayisi, int *sksp) {
-	//Selection (Seçmeli) -iki dizi gibi davranır-
+	//Selection (SeÃ§meli) -iki dizi gibi davranÃ½r-
 	int ekucuk, yedek, ydsayisi = 0;
 	int sks = *sksp;
 	for (int q = 0; q < esayisi; q++) {
