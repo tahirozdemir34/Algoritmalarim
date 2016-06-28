@@ -1,5 +1,5 @@
-// Tahir Özdemir 152120141047
-// Mayıs 2016
+// Tahir Ã–zdemir
+// MayÄ±s 2016
 
 #include <iostream>
 #include <fstream>
@@ -8,16 +8,16 @@ using namespace std;
 ifstream input("input.txt", ios::in);
 ofstream output("output.txt", ios::out);
 
-char d;					 //Yön bilgisini tutmak için - (d)irection
-int n, m, i, j;			 //n^2 nokta sayısı ; m çizgi sayısı ; i ve j koordinatlar
-char matrix[17][17];     //Şekili tutmak için
-int H[72][2] = {};		 //Yatay çizgilerin başlangıç nokta koordinatlrı 
-int V[72][2] = {};		 //Dikey çizgilerin başlangıç nokta koordinatlrı 
-int prblmcnt = 1;		 //Dosyaya yazdırırken problemleri saymak için
+char d;				 //YÃ¶n bilgisini tutmak iÃ§in - (d)irection
+int n, m, i, j;			 //n^2 nokta sayÄ±sÄ± ; m Ã§izgi sayÄ±sÄ± ; i ve j koordinatlar
+char matrix[17][17];             //Åekili tutmak iÃ§in
+int H[72][2] = {};		 //Yatay Ã§izgilerin baÅŸlangÄ±Ã§ nokta koordinatlarÄ± 
+int V[72][2] = {};		 //Dikey Ã§izgilerin baslangÄ±Ã§ nokta koordinatlarÄ± 
+int prblmcnt = 1;		 //Dosyaya yazdÄ±rÄ±rken problemleri saymak iÃ§in
 
 int counter(int r) {
-	int count = 0;		 //Kare sayısını döndürmek için
-	int flag = 0;		 //Çizgilei saymak için
+	int count = 0;		 //Kare sayÄ±sÄ±nÄ± dÃ¶ndÃ¼rmek iÃ§in
+	int flag = 0;		 //Ã‡izgileri saymak iÃ§in
 
 	for (int i = 0; i < n + (n - 1); i++) {
 		for (int j = 0; j < n + (n - 1); j++) {
@@ -42,7 +42,7 @@ int counter(int r) {
 	return count;
 }
 
-//Noktaları matrise yeleştirmek için
+//NoktalarÄ± matrise yeleÅŸtirmek iÃ§in
 void fillmatrix() {
 	for (int k = 0; k < n + (n - 1); k++) {
 		for (int z = 0; z < n + (n - 1); z++) {
@@ -56,7 +56,7 @@ void fillmatrix() {
 	}
 }
 
-//Çizgileri okuyup matrise yerleştirmek için
+//Ã‡izgileri okuyup matrise yerleÅŸtirmek iÃ§in
 void readHV() {
 	int flag = 0;
 	int fh = 0, fv = 0;
@@ -104,7 +104,14 @@ void answer() {
 	}
 }
 
-int main() {	if (!input.is_open()) {		cout << "Error openning input file!\n";		system("pause");		exit(0);	}	input >> n >> m;
+int main() {
+	if (!input.is_open()) {
+		cout << "Error openning input file!\n";
+		system("pause");
+		exit(0);
+	}
+
+	input >> n >> m;
 
 	fillmatrix();
 	readHV();
